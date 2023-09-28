@@ -1,0 +1,516 @@
+.quiz-app-UI-design {
+    margin-top: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%;
+  }
+
+  .quiz-app-UI-design .rectangle {
+    background-color: #ffc102;
+    border-radius: 30px;
+    height: 270px;
+    left: 45px;
+    position: absolute;
+    top: 34px;
+    width: 337px;
+  }
+  
+  .quiz-app-UI-design .div1 {
+    background-color: #ffffff;
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+    width: 337px;
+  }
+  
+  .quiz-app-UI-design .overlap1 {
+    height: 347px;
+    left: -45px;
+    position: absolute;
+    top: -34px;
+    width: 414px;
+  }
+  
+  .quiz-app-UI-design .rectangle1 {
+    height: 228px;
+    left: 45px;
+    position: absolute;
+    top: 34px;
+    width: 337px;
+  }
+  
+  .quiz-app-UI-design .ellipse1 {
+    background-color: #000000b2;
+    border-radius: 45px;
+    height: 90px;
+    left: 324px;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 122px;
+    width: 90px;
+  }
+  
+  .quiz-app-UI-design .ellipse1-2 {
+    background-color: #000000b2;
+    border-radius: 45px;
+    height: 90px;
+    left: 123px;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    width: 90px;
+  }
+  
+  .quiz-app-UI-design .ellipse1-3 {
+    background-color: #000000b2;
+    border-radius: 20px;
+    height: 40px;
+    left: 252px;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 50px;
+    width: 40px;
+  }
+  
+  .quiz-app-UI-design .frame1 {
+    height: 30px;
+    left: 60px;
+    position: absolute;
+    top: 66px;
+    width: 32px;
+  }
+  
+  .quiz-app-UI-design .ellipse1-4 {
+    background-color: #000000b2;
+    border-radius: 45px;
+    height: 90px;
+    left: 0;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 103px;
+    width: 90px;
+  }
+  
+  .quiz-app-UI-design .rectangle1-2 {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #fbebff;
+    height: 170px;
+    left: 73px;
+    position: absolute;
+    top: 177px;
+    width: 281px;
+  }
+  
+  .quiz-app-UI-design .group1 {
+    height: 67px;
+    left: 185px;
+    position: absolute;
+    top: 142px;
+    width: 69px;
+  }
+  
+  .quiz-app-UI-design .overlap-group1{
+    background-color: #ffffff;
+    border-radius: 33.5px;
+    height: 67px;
+    position: relative;
+    width: 67px;
+  }
+  
+  .quiz-app-UI-design .img1 {
+    height: 57px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 57px;
+  }
+  
+  .quiz-app-UI-design .ellipse1-5 {
+    background-color: #ffffff;
+    border-radius: 24.5px;
+    height: 49px;
+    left: 9px;
+    position: absolute;
+    top: 9px;
+    width: 49px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1 {
+    color: #feb005;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .quiz-app-UI-design .rectangle1-3 {
+    background-color: #1e8334;
+    border-radius: 15px;
+    height: 8px;
+    left: 111px;
+    position: absolute;
+    top: 194px;
+    width: 30px;
+  }
+  
+  .quiz-app-UI-design .rectangle1-4 {
+    background-color: #d05904;
+    border-radius: 15px;
+    height: 8px;
+    left: 283px;
+    position: absolute;
+    top: 194px;
+    width: 36px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-2 {
+    color: #1e8334;
+    font-family: "DM Sans-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 83px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 186px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-3 {
+    color: #ffc000;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 221px;
+  }
+  
+  .quiz-app-UI-design .how-many-students-in1 {
+    color: #2b252c;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 80px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 274px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-4 {
+    color: #d05904;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 326px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 186px;
+  }
+  
+  .quiz-app-UI-design .vector1 {
+    height: 25px;
+    left: 339px;
+    position: absolute;
+    top: 71px;
+    width: 22px;
+  }
+  
+  .quiz-app-UI-design .come1 {
+    height: 48px;
+    left: 48px;
+    position: absolute;
+    top: 376px;
+    width: 242px;
+  }
+  
+  .quiz-app-UI-design .overlap1-2 {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #ffb504;
+    border-radius: 15px;
+    height: 52px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+    width: 244px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-5 {
+    color: #2b252c;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+  }
+  
+  .quiz-app-UI-design .vector1-2 {
+    height: 22px;
+    left: 202px;
+    position: absolute;
+    top: 12px;
+    width: 22px;
+  }
+  
+  .quiz-app-UI-design .comes1 {
+    height: 48px;
+    left: 48px;
+    position: absolute;
+    top: 445px;
+    width: 242px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-6 {
+    color: #2b252c;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+  }
+  
+  .quiz-app-UI-design .vector1-3 {
+    height: 22px;
+    left: 202px;
+    position: absolute;
+    top: 13px;
+    width: 22px;
+  }
+  
+  .quiz-app-UI-design .are-coming1 {
+    height: 48px;
+    left: 48px;
+    position: absolute;
+    top: 514px;
+    width: 242px;
+  }
+  
+  .quiz-app-UI-design .text-wrapper1-7 {
+    color: #2b252c;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+  }
+  
+  .quiz-app-UI-design .vector1-4 {
+    height: 24px;
+    left: 201px;
+    position: absolute;
+    top: 11px;
+    width: 24px;
+  }
+  
+  .quiz-app-UI-design .came1 {
+    height: 48px;
+    left: 48px;
+    position: absolute;
+    top: 583px;
+    width: 242px;
+  }
+
+  @media screen and (min-width:600px) {
+
+    .quiz-app-UI-design .div1 {
+      background-color: #ffffff;
+      height: 680px;
+      overflow: hidden;
+      position: relative;
+      width: 1440px;
+  }
+
+  .quiz-app-UI-design .overlap1 {
+    height: 347px;
+    left: -45px;
+    position: absolute;
+    top: -34px;
+    width: 1440px;
+}
+
+.quiz-app-UI-design .rectangle {
+  background-color: #ffc102;
+  border-radius: 30px;
+  height: 270px;
+  left: 45px;
+  position: absolute;
+  top: 34px;
+  width: 1429px;
+}
+
+.quiz-app-UI-design .ellipse1 {
+  background-color: #000000b2;
+  border-radius: 45px;
+  height: 90px;
+  left: 1412px;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 122px;
+  width: 90px;
+}
+
+.quiz-app-UI-design .ellipse1-2 {
+  background-color: #000000b2;
+  border-radius: 45px;
+  height: 90px;
+  left: 532px;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 0;
+  width: 90px;
+}
+
+.quiz-app-UI-design .ellipse1-3 {
+  background-color: #000000b2;
+  border-radius: 20px;
+  height: 40px;
+  left: 988px;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 50px;
+  width: 40px;
+}
+
+.quiz-app-UI-design .ellipse1-4 {
+  background-color: #000000b2;
+  border-radius: 45px;
+  height: 90px;
+  left: 0;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 103px;
+  width: 90px;
+}
+
+.quiz-app-UI-design .rectangle1-2 {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #fbebff;
+  height: 170px;
+  left: 100px;
+  position: absolute;
+  top: 177px;
+  width: 1313px;
+}
+
+.quiz-app-UI-design .group1 {
+  height: 67px;
+  left: 708px;
+  position: absolute;
+  top: 142px;
+  width: 69px;
+}
+
+.quiz-app-UI-design .overlap-group1 {
+  background-color: #ffffff;
+  border-radius: 33.5px;
+  height: 67px;
+  position: relative;
+  width: 67px;
+}
+
+.quiz-app-UI-design .rectangle1-3 {
+  background-color: #1e8334;
+  border-radius: 15px;
+  height: 8px;
+  left: 111px;
+  position: absolute;
+  top: 194px;
+  width: 30px;
+}
+
+.quiz-app-UI-design .rectangle1-4 {
+  background-color: #d05904;
+  border-radius: 15px;
+  height: 8px;
+  left: 1341px;
+  position: absolute;
+  top: 194px;
+  width: 36px;
+}
+
+.quiz-app-UI-design .text-wrapper1-2 {
+  color: #1e8334;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 147px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 186px;
+}
+
+.quiz-app-UI-design .text-wrapper1-3 {
+  color: #ffc000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 17px;
+  font-weight: 500;
+  left: 685px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 221px;
+}
+
+.quiz-app-UI-design .how-many-students-in1 {
+  color: #2b252c;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 318px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 274px;
+  width: 867px;
+}
+
+.quiz-app-UI-design .text-wrapper1-4 {
+  color: #d05904;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 1383px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 186px;
+}
+
+.quiz-app-UI-design .vector1 {
+  height: 25px;
+  left: 1433px;
+  position: absolute;
+  top: 71px;
+  width: 22px;
+}
+
+  }
+  
+  
