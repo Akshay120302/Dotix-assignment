@@ -13,6 +13,8 @@ export const First = () => {
     const [wrongans , setWrongAns] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
+    
+
     const questions = [
         {
             text: "What is the capital of America?",
@@ -66,6 +68,7 @@ export const First = () => {
         // Increment the score
         if (isCorrect) {
             setScore(score + 1);
+            
         }
 
         if(!isCorrect){
@@ -90,12 +93,12 @@ export const First = () => {
     const Previous = (isCorrect) =>{
         if(currentQuestion>0){
             setCurrentQuestion(currentQuestion-1);
-            // if(isCorrect){
-            // setScore(score-1);
-            // }
-            // else{
-            //     setWrongAns(wrongans-1);
-            // }
+            if(isCorrect){
+            setScore(score-1);
+            }
+            else{
+                setWrongAns(wrongans-1);
+            }
         }
     }
     const Next = () =>{
