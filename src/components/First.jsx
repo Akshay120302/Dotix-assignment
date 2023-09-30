@@ -66,10 +66,12 @@ export const First = () => {
         // Increment the score
         if (isCorrect) {
             setScore(score + 1);
+            console.log(score);
         }
 
         if(!isCorrect){
             setWrongAns(wrongans+1);
+            console.log(wrongans);
         }
 
         if (currentQuestion + 1 < questions.length) {
@@ -82,6 +84,7 @@ export const First = () => {
     /* Resets the game back to default */
     const restartGame = () => {
         setScore(0);
+        setWrongAns(0);
         setCurrentQuestion(0);
         setShowResults(false);
     };
@@ -99,7 +102,12 @@ export const First = () => {
     }
     const Next = () =>{
         if(currentQuestion<questions.length){
-            setCurrentQuestion(currentQuestion+1);
+            if(currentQuestion === questions.length-1){
+                setShowResults(true);
+                }
+                else{
+                    setCurrentQuestion(currentQuestion+1);
+                }
         }
     }
 
