@@ -66,12 +66,10 @@ export const First = () => {
         // Increment the score
         if (isCorrect) {
             setScore(score + 1);
-            console.log(score);
         }
 
         if(!isCorrect){
             setWrongAns(wrongans+1);
-            console.log(wrongans);
         }
 
         if (currentQuestion + 1 < questions.length) {
