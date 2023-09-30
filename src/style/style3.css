@@ -240,7 +240,7 @@
     font-family: "Poppins-Medium", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 2px;
+    left: 14px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
@@ -334,7 +334,7 @@
     font-family: "Poppins-Medium", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 6px;
+    left: 10px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
@@ -773,7 +773,7 @@
   background-color: #1e8334;
   border-radius: 6px;
   height: 12px;
-  left: 573px;
+  left: 584px;
   position: absolute;
   top: 7px;
   width: 12px;

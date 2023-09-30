@@ -20,7 +20,7 @@ export const Fifth = () => {
                     <div className="frame5">
                         <div className="text-wrapper5">Popular</div>
                         <div className="frame5-2">
-                        <Link to="/">
+                        <Link to="/quiz">
 
           
                             <div className="frame5-3">

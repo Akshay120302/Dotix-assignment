@@ -10,10 +10,10 @@ function App() {
   
     <Router>
       <Routes>
-        <Route path='/' element={<First/>} />
+        <Route path='/quiz' element={<First/>} />
         <Route path='/LeaderBoard' element={<Second/>} />
-        <Route path='/dashboard' element={<Third/>} />
-        <Route path='/index' element={<Fifth/>} />
+        <Route path='/scoreboard' element={<Third/>} />
+        <Route path='/' element={<Fifth/>} />
       </Routes>
     </Router>
     

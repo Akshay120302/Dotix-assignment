@@ -106,7 +106,7 @@
   
   .quiz-app-UI-design .group1 {
     height: 67px;
-    left: 185px;
+    left: 183px;
     position: absolute;
     top: 142px;
     width: 69px;
@@ -150,15 +150,15 @@
     top: 24px;
 }
   
-  .quiz-app-UI-design .rectangle1-3 {
-    background-color: #1e8334;
-    border-radius: 15px;
-    height: 8px;
-    left: 111px;
-    position: absolute;
-    top: 194px;
-    width: 30px;
-  }
+.quiz-app-UI-design .rectangle1-3 {
+  background-color: #1e8334;
+  border-radius: 15px;
+  height: 8px;
+  left: 111px;
+  position: absolute;
+  top: 194px;
+  width: 39px;
+}
   
   .quiz-app-UI-design .rectangle1-4 {
     background-color: #d05904;
@@ -175,12 +175,12 @@
     font-family: "DM Sans-Bold", Helvetica;
     font-size: 14px;
     font-weight: 700;
-    left: 83px;
+    left: 93px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
     top: 186px;
-  }
+}
   
   .quiz-app-UI-design .text-wrapper1-3 {
     color: #ffc000;
@@ -495,7 +495,7 @@ li{
 
     .quiz-app-UI-design .div1 {
       background-color: #ffffff;
-      height: 725px;
+      height: 743px;
       overflow: hidden;
       position: relative;
       width: 1440px;
@@ -753,18 +753,19 @@ display: inline-block;
   margin-top: 320px;
   width: 100%;
   height: 304px;
+  padding: 10px 84px;
 }
 .quiz-app-UI-design .quiz-options li{
-border-radius: 0.5rem;
-font-weight: 600;
-margin: .7rem 0;
-padding: .4rem 1.2rem;
-cursor: pointer;
-border: 3px solid var(--light-purple-color);
-background-color: var(--light-purple-color);
-color: var(--light-color);
-box-shadow: 0 4px 0 0 #6c4298;
-transition: var(--transition);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin: 2.7rem 0;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  border: 3px solid var(--light-purple-color);
+  background-color: var(--light-purple-color);
+  color: var(--light-color);
+  box-shadow: 0 4px 0 0 #ffc102;
+  transition: var(--transition);
 }
 .quiz-app-UI-design .quiz-options li:hover{
 background-color: var(--grey-color);
