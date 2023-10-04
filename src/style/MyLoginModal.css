@@ -138,7 +138,7 @@ input {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 333px;
+        width: 153px;
         max-height: 430px;
         padding: 48px 84px;
         border-radius: 10px;
@@ -156,8 +156,8 @@ input {
         display: flex;
         justify-content: right;
         position: fixed;
-        width: 73%;
-        margin-top: -43px;
+        width: 100%;
+        margin-top: -57px;
     }
 
     .fa-xmark {
@@ -171,7 +171,7 @@ input {
         height: 40px;
         border-radius: 10px;
         color: #000000;
-        margin-left: 63px;
+        margin-left: 22px;
         background-color: #ffc102;
         font-size: 16px;
         font-weight: 600;
