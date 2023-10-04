@@ -177,4 +177,33 @@ input {
         font-weight: 600;
     }
 
+    .profileImg {
+        align-items: center;
+        border-radius: 44px;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        margin-left: 110px;
+        width: 50px;
+    }
+
+    .profile {
+        background-color: #faebd7;
+        height: 100px;
+        margin-left: 10px;
+        width: 400px;
+    }
+
+    .btnP {
+        background-color: #ffc102;
+        border-radius: 10px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        height: 40px;
+        width: 150px;
+        margin-left: 22px;
+    }
+    
+
 }
