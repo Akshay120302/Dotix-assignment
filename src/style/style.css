@@ -496,8 +496,8 @@ li{
   @media screen and (min-width:600px) {
 
     .quiz-app-UI-design .div1 {
-      background-color: #ffffff;
-      height: 743px;
+      background-color: #fff;
+      height: 765px;
       overflow: hidden;
       position: relative;
       width: 1440px;
@@ -816,6 +816,13 @@ li{
 
   width:250px;
   height: 20px;
+}
+
+.quiz-app-UI-design .btnBox {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 535px;
 }
 
   }
