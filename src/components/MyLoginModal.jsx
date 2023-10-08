@@ -35,7 +35,7 @@ const MyLoginModal = ({closeLoginModal}) => {
 
                 <div className="closebutton">
                 {/* <i className="fa-solid fa-xmark" onClick={closeLoginModal}></i> */}
-                <i class="fa-solid fa-xmark" onClick={closeLoginModal}></i>
+                <i className="fa-solid fa-xmark" onClick={closeLoginModal}></i>
 
                 </div>
                 <div className="login">

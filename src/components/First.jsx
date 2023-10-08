@@ -10,10 +10,9 @@ export const First = () => {
     // let questions = "https://opentdb.com/api.php?amount=10&category=23";
     const [showFinalResults, setShowResults] = useState(false);
     const [score, setScore] = useState(0);
-    const [wrongans , setWrongAns] = useState(0);
+    const [wrongans, setWrongAns] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(0);
-
-    
+    const [answeredQues, setAnsweredQues] = useState(0);
 
     const questions = [
         {
@@ -65,21 +64,30 @@ export const First = () => {
 
 
     const optionClicked = (isCorrect) => {
+        console.log("Entered function");
         // Increment the score
-        if (isCorrect) {
-            setScore(score + 1);
-            
+        if (currentQuestion >= answeredQues) {
+            setAnsweredQues(answeredQues+1);
+            if (isCorrect) {
+                setScore(score + 1);
+            }
+            console.log("Working properly");
+            console.log(answeredQues);
+            if (!isCorrect) {
+                setWrongAns(wrongans + 1);
+            }
+
+            if (currentQuestion + 1 < questions.length) {
+                setCurrentQuestion(currentQuestion + 1);
+            } else {
+                setShowResults(true);
+            }
+
+            // setAnsweredQues(answeredQues+1);
         }
 
-        if(!isCorrect){
-            setWrongAns(wrongans+1);
-        }
+        setCurrentQuestion(currentQuestion + 1);
 
-        if (currentQuestion + 1 < questions.length) {
-            setCurrentQuestion(currentQuestion + 1);
-        } else {
-            setShowResults(true);
-        }
     };
 
     /* Resets the game back to default */
@@ -87,35 +95,36 @@ export const First = () => {
         setScore(0);
         setWrongAns(0);
         setCurrentQuestion(0);
+        setAnsweredQues(0);
         setShowResults(false);
     };
 
-    const Previous = (isCorrect) =>{
-        if(currentQuestion>0){
-            setCurrentQuestion(currentQuestion-1);
-            if(isCorrect){
-            setScore(score-1);
-            }
-            else{
-                setWrongAns(wrongans-1);
-            }
+    const Previous = () => {
+        if (currentQuestion > 0) {
+            setCurrentQuestion(currentQuestion - 1);
+            // if (isCorrect) {
+            //     setScore(score - 1);
+            // }
+            // else {
+            //     setWrongAns(wrongans - 1);
+            // }
         }
     }
-    const Next = () =>{
-        if(currentQuestion<questions.length){
-            if(currentQuestion === questions.length-1){
+    const Next = () => {
+        if (currentQuestion < questions.length) {
+            if (currentQuestion === questions.length - 1) {
                 setShowResults(true);
-                }
-                else{
-                    setCurrentQuestion(currentQuestion+1);
-                }
+            }
+            else {
+                setCurrentQuestion(currentQuestion + 1);
+            }
         }
     }
 
     return (
         <>
-            {showFinalResults ? <Third questions ={questions} restartGame = {restartGame}  score = {score} wrongans = {wrongans}/>
-            // {showFinalResults && <Third questions ={questions} restartGame = {restartGame}  score = {score}/>}
+            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} />
+                // {showFinalResults && <Third questions ={questions} restartGame = {restartGame}  score = {score}/>}
                 :
                 <div className="quiz-app-UI-design">
                     <div className="div1">
@@ -142,7 +151,7 @@ export const First = () => {
                                         <path d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C10 28.5 28.5 20 28.5 0C44.2401 0 57 12.7599 57 28.5Z" fill="#FEB005" />
                                     </svg>
                                     <div className="ellipse1-5" />
-                                    <div className="text-wrapper1">{currentQuestion+1}</div>
+                                    <div className="text-wrapper1">{currentQuestion + 1}</div>
                                 </div>
                             </div>
                             <div className="rectangle1-3" />

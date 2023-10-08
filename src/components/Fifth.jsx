@@ -5,7 +5,7 @@ import "../style/style5.css";
 import profile from "../images/Fifth/profile.jpeg";
 import { useAuth0 } from "@auth0/auth0-react";
 
-export const Fifth = () => {
+function Fifth(){
 
     const [showLoginModal, setShowLoginModal] = useState(false);
 
