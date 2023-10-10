@@ -2,14 +2,18 @@ import React , {useState} from "react";
 import { Link} from 'react-router-dom';
 import MyLoginModal from './MyLoginModal';
 import "../style/style5.css";
-import profile from "../images/Fifth/profile.jpeg";
+import 'font-awesome/css/font-awesome.min.css';
 import { useAuth0 } from "@auth0/auth0-react";
 
-function Fifth(){
+function Fifth(){ 
 
     const [showLoginModal, setShowLoginModal] = useState(false);
 
-    const closeLoginModal = () => setShowLoginModal(false);
+    const closeLoginModal = () => {
+        setShowLoginModal(false);
+        console.log("Entered the closeLoginModal function");
+        console.log(setShowLoginModal(false));
+    }
 
     const { isAuthenticated, user } = useAuth0();
 
@@ -65,10 +69,7 @@ function Fifth(){
                         </div>
                     </div>
                     <div className="frame5-4">
-                        {/* <img className="frame5-5" alt="Frame" src="../images/Fifth/frame-1261155442.svg" /> */}
-                        <svg className="frame5-5" width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.6461 23.6604L16.5561 24.6771C16.0945 25.1076 15.3482 25.1076 14.8915 24.6771L5.34617 15.7786C4.88461 15.3481 4.88461 14.6519 5.34617 14.226L14.8915 5.32288C15.3531 4.89237 16.0994 4.89237 16.5561 5.32288L17.6461 6.33959C18.1126 6.77467 18.1028 7.48454 17.6265 7.91046L11.7097 13.1681H25.8216C26.4746 13.1681 27 13.6581 27 14.2672V15.7328C27 16.3419 26.4746 16.8319 25.8216 16.8319H11.7097L17.6265 22.0895C18.1077 22.5155 18.1175 23.2253 17.6461 23.6604Z" fill="white" fill-opacity="0.9" />
-                        </svg>
+                        <i className="fa-solid fa-bars" idname="frame5-5" style={{color: '#ffffff'}}></i>
 
                         {isAuthenticated ? (
 
@@ -77,13 +78,13 @@ function Fifth(){
                         <div className="text-wrapper5-4">Hello User</div>
                         )}
                         <div className="ellipse-wrapper5" onClick={() => setShowLoginModal(true)}>
-                        {showLoginModal && <MyLoginModal closeLoginModal={closeLoginModal} />}
                         {isAuthenticated ? (
                             <img className="ellipse5-6" alt="Ellipse" src={user.picture} />) :
                             (
-                            <img className="ellipse5-6" alt="Ellipse" src={profile} />
-                            )}
+                                <i className="fa-solid fa-user"></i>
+                                )}
                         </div>
+                                {showLoginModal && <MyLoginModal closeLoginModal={closeLoginModal}/>}
                     </div>
                 </div>
                 
