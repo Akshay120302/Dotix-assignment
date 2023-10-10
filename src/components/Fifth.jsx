@@ -9,11 +9,7 @@ function Fifth(){
 
     const [showLoginModal, setShowLoginModal] = useState(false);
 
-    const closeLoginModal = () => {
-        setShowLoginModal(false);
-        console.log("Entered the closeLoginModal function");
-        console.log(setShowLoginModal(false));
-    }
+    const closeLoginModal = () => setShowLoginModal(false);
 
     const { isAuthenticated, user } = useAuth0();
 

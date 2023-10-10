@@ -16,50 +16,176 @@ export const First = () => {
 
     const questions = [
         {
-            text: "What is the capital of America?",
-            options: [
-                { id: 0, text: "New York City", isCorrect: false },
-                { id: 1, text: "Boston", isCorrect: false },
-                { id: 2, text: "Santa Fe", isCorrect: false },
-                { id: 3, text: "Washington DC", isCorrect: true },
-            ],
+            "text": "Which planet is known as the 'Red Planet'?",
+            "options": [
+                { "id": 0, "text": "Earth", "isCorrect": false },
+                { "id": 1, "text": "Venus", "isCorrect": false },
+                { "id": 2, "text": "Mars", "isCorrect": true },
+                { "id": 3, "text": "Jupiter", "isCorrect": false }
+            ]
         },
         {
-            text: "What year was the Constitution of America written?",
-            options: [
-                { id: 0, text: "1787", isCorrect: true },
-                { id: 1, text: "1776", isCorrect: false },
-                { id: 2, text: "1774", isCorrect: false },
-                { id: 3, text: "1826", isCorrect: false },
-            ],
+            "text": "What is the largest planet in our solar system?",
+            "options": [
+                { "id": 0, "text": "Earth", "isCorrect": false },
+                { "id": 1, "text": "Mars", "isCorrect": false },
+                { "id": 2, "text": "Saturn", "isCorrect": false },
+                { "id": 3, "text": "Jupiter", "isCorrect": true }
+            ]
         },
         {
-            text: "Who was the second president of the US?",
-            options: [
-                { id: 0, text: "John Adams", isCorrect: true },
-                { id: 1, text: "Paul Revere", isCorrect: false },
-                { id: 2, text: "Thomas Jefferson", isCorrect: false },
-                { id: 3, text: "Benjamin Franklin", isCorrect: false },
-            ],
+            "text": "Which celestial body is often referred to as Earth's natural satellite?",
+            "options": [
+                { "id": 0, "text": "Mars", "isCorrect": false },
+                { "id": 1, "text": "Venus", "isCorrect": false },
+                { "id": 2, "text": "The Moon", "isCorrect": true },
+                { "id": 3, "text": "Jupiter", "isCorrect": false }
+            ]
         },
         {
-            text: "What is the largest state in the US?",
-            options: [
-                { id: 0, text: "California", isCorrect: false },
-                { id: 1, text: "Alaska", isCorrect: true },
-                { id: 2, text: "Texas", isCorrect: false },
-                { id: 3, text: "Montana", isCorrect: false },
-            ],
+            "text": "What is the closest star to Earth?",
+            "options": [
+                { "id": 0, "text": "Venus", "isCorrect": false },
+                { "id": 1, "text": "Jupiter", "isCorrect": false },
+                { "id": 2, "text": "The Sun", "isCorrect": true },
+                { "id": 3, "text": "Mars", "isCorrect": false }
+            ]
         },
         {
-            text: "Which of the following countries DO NOT border the US?",
-            options: [
-                { id: 0, text: "Canada", isCorrect: false },
-                { id: 1, text: "Russia", isCorrect: true },
-                { id: 2, text: "Cuba", isCorrect: true },
-                { id: 3, text: "Mexico", isCorrect: false },
-            ],
+            "text": "Which planet has the largest number of moons in our solar system?",
+            "options": [
+                { "id": 0, "text": "Earth", "isCorrect": false },
+                { "id": 1, "text": "Mars", "isCorrect": false },
+                { "id": 2, "text": "Saturn", "isCorrect": true },
+                { "id": 3, "text": "Jupiter", "isCorrect": false }
+            ]
         },
+        {
+            "text": "What is the name of the first human to walk on the Moon?",
+            "options": [
+                { "id": 0, "text": "Neil Armstrong", "isCorrect": true },
+                { "id": 1, "text": "Buzz Aldrin", "isCorrect": false },
+                { "id": 2, "text": "John Glenn", "isCorrect": false },
+                { "id": 3, "text": "Alan Shepard", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "Which space agency launched the Hubble Space Telescope?",
+            "options": [
+                { "id": 0, "text": "NASA", "isCorrect": true },
+                { "id": 1, "text": "ESA", "isCorrect": false },
+                { "id": 2, "text": "Roscosmos", "isCorrect": false },
+                { "id": 3, "text": "CNSA", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "What is the name of the largest volcano in the solar system, located on Mars?",
+            "options": [
+                { "id": 0, "text": "Mount Kilimanjaro", "isCorrect": false },
+                { "id": 1, "text": "Mauna Loa", "isCorrect": false },
+                { "id": 2, "text": "Olympus Mons", "isCorrect": true },
+                { "id": 3, "text": "Mount Vesuvius", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "What is the name of the spacecraft that first landed humans on the Moon in 1969?",
+            "options": [
+                { "id": 0, "text": "Apollo 11", "isCorrect": true },
+                { "id": 1, "text": "Gemini 7", "isCorrect": false },
+                { "id": 2, "text": "Mercury 3", "isCorrect": false },
+                { "id": 3, "text": "Voyager 2", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "Which gas is the most abundant in Earth's atmosphere?",
+            "options": [
+                { "id": 0, "text": "Carbon dioxide (CO2)", "isCorrect": false },
+                { "id": 1, "text": "Nitrogen (N2)", "isCorrect": true },
+                { "id": 2, "text": "Oxygen (O2)", "isCorrect": false },
+                { "id": 3, "text": "Argon (Ar)", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "What is the name of the space telescope launched by the European Space Agency (ESA) in 2009?",
+            "options": [
+                { "id": 0, "text": "Kepler Space Telescope", "isCorrect": false },
+                { "id": 1, "text": "James Webb Space Telescope", "isCorrect": false },
+                { "id": 2, "text": "Hubble Space Telescope", "isCorrect": false },
+                { "id": 3, "text": "Planck Space Telescope", "isCorrect": true }
+            ]
+        },
+        {
+            "text": "What is the name of the first artificial satellite, launched by the Soviet Union in 1957?",
+            "options": [
+                { "id": 0, "text": "Sputnik 1", "isCorrect": true },
+                { "id": 1, "text": "Explorer 1", "isCorrect": false },
+                { "id": 2, "text": "Vostok 1", "isCorrect": false },
+                { "id": 3, "text": "Telstar 1", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "Which planet in our solar system is known for its beautiful rings?",
+            "options": [
+                { "id": 0, "text": "Mars", "isCorrect": false },
+                { "id": 1, "text": "Earth", "isCorrect": false },
+                { "id": 2, "text": "Venus", "isCorrect": false },
+                { "id": 3, "text": "Saturn", "isCorrect": true }
+            ]
+        },
+        {
+            "text": "What is the name of the galaxy that includes our solar system?",
+            "options": [
+                { "id": 0, "text": "Andromeda Galaxy", "isCorrect": false },
+                { "id": 1, "text": "Milky Way Galaxy", "isCorrect": true },
+                { "id": 2, "text": "Whirlpool Galaxy", "isCorrect": false },
+                { "id": 3, "text": "Triangulum Galaxy", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "How many moons does Earth have?",
+            "options": [
+                { "id": 0, "text": "0", "isCorrect": false },
+                { "id": 1, "text": "1", "isCorrect": false },
+                { "id": 2, "text": "2", "isCorrect": true },
+                { "id": 3, "text": "3", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "What is the name of the mission that successfully landed the rover 'Perseverance' on Mars?",
+            "options": [
+                { "id": 0, "text": "Mars Odyssey", "isCorrect": false },
+                { "id": 1, "text": "Mars Reconnaissance Orbiter", "isCorrect": false },
+                { "id": 2, "text": "Mars Science Laboratory", "isCorrect": false },
+                { "id": 3, "text": "Mars 2020", "isCorrect": true }
+            ]
+        },
+        {
+            "text": "Which planet is sometimes referred to as the 'Morning Star' or 'Evening Star'?",
+            "options": [
+                { "id": 0, "text": "Jupiter", "isCorrect": false },
+                { "id": 1, "text": "Venus", "isCorrect": true },
+                { "id": 2, "text": "Mars", "isCorrect": false },
+                { "id": 3, "text": "Saturn", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "What is the name of the mission that first reached Pluto and provided close-up images of the dwarf planet?",
+            "options": [
+                { "id": 0, "text": "Cassini-Huygens", "isCorrect": false },
+                { "id": 1, "text": "New Horizons", "isCorrect": true },
+                { "id": 2, "text": "Voyager 1", "isCorrect": false },
+                { "id": 3, "text": "Pioneer 10", "isCorrect": false }
+            ]
+        },
+        {
+            "text": "Which gas makes up the majority of Jupiter's atmosphere?",
+            "options": [
+                { "id": 0, "text": "Oxygen (O2)", "isCorrect": false },
+                { "id": 1, "text": "Methane (CH4)", "isCorrect": false },
+                { "id": 2, "text": "Hydrogen (H2)", "isCorrect": true },
+                { "id": 3, "text": "Nitrogen (N2)", "isCorrect": false }
+            ]
+        }
     ];
 
 
@@ -82,8 +208,6 @@ export const First = () => {
             } else {
                 setShowResults(true);
             }
-
-            // setAnsweredQues(answeredQues+1);
         }
 
         setCurrentQuestion(currentQuestion + 1);
@@ -102,12 +226,6 @@ export const First = () => {
     const Previous = () => {
         if (currentQuestion > 0) {
             setCurrentQuestion(currentQuestion - 1);
-            // if (isCorrect) {
-            //     setScore(score - 1);
-            // }
-            // else {
-            //     setWrongAns(wrongans - 1);
-            // }
         }
     }
     const Next = () => {
@@ -124,7 +242,6 @@ export const First = () => {
     return (
         <>
             {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} />
-                // {showFinalResults && <Third questions ={questions} restartGame = {restartGame}  score = {score}/>}
                 :
                 <div className="quiz-app-UI-design">
                     <div className="div1">
@@ -133,7 +250,6 @@ export const First = () => {
                             <div className="ellipse1" />
                             <div className="ellipse1-2" />
                             <div className="ellipse1-3" />
-                            {/* <img className="frame" alt="Frame" src="#" /> */}
 
                             <Link to="/">
                                 <svg className="frame1" width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +262,7 @@ export const First = () => {
                             <div className="rectangle1-2" />
                             <div className="group1">
                                 <div className="overlap-group1">
-                                    {/* <img className="img" alt="Ellipse" src="#" /> */}
+                                    
                                     <svg className="img1" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C10 28.5 28.5 20 28.5 0C44.2401 0 57 12.7599 57 28.5Z" fill="#FEB005" />
                                     </svg>
@@ -165,7 +281,7 @@ export const First = () => {
                                 {questions[currentQuestion].text}
                             </p>
                             <div className="text-wrapper1-4">{wrongans}</div>
-                            {/* <img className="vector" alt="Vector" src="#" /> */}
+                            
                             <ul className="quiz-options">
                                 {questions[currentQuestion].options.map((option) => {
                                     return (
