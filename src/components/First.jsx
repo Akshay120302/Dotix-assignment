@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Third from "./Third";
+import AlertModal from "./AlertModal";
 import { Link } from 'react-router-dom';
 import "../style/style.css";
 
@@ -13,6 +14,11 @@ export const First = () => {
     const [wrongans, setWrongAns] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answeredQues, setAnsweredQues] = useState(0);
+    const [convertButton, setConvertButton] = useState("Next");
+    const [showAlertModal, setShowAlertModal] = useState(false);
+
+    const Alert = () => setShowResults(true);
+
 
     const questions = [
         {
@@ -193,19 +199,23 @@ export const First = () => {
         console.log("Entered function");
         // Increment the score
         if (currentQuestion >= answeredQues) {
-            setAnsweredQues(answeredQues+1);
+            setAnsweredQues(answeredQues + 1);
             if (isCorrect) {
                 setScore(score + 1);
             }
-            console.log("Working properly");
-            console.log(answeredQues);
             if (!isCorrect) {
                 setWrongAns(wrongans + 1);
             }
-
+            if(currentQuestion === questions.length - 2){
+                setConvertButton("Submit");
+            }
+            if(currentQuestion === questions.length - 1){
+                setShowAlertModal(true);  
+            }
             if (currentQuestion + 1 < questions.length) {
                 setCurrentQuestion(currentQuestion + 1);
-            } else {
+            } 
+            else {
                 setShowResults(true);
             }
         }
@@ -221,6 +231,8 @@ export const First = () => {
         setCurrentQuestion(0);
         setAnsweredQues(0);
         setShowResults(false);
+        setConvertButton("Next");
+        setShowAlertModal(false);
     };
 
     const Previous = () => {
@@ -230,14 +242,19 @@ export const First = () => {
     }
     const Next = () => {
         if (currentQuestion < questions.length) {
+            if (currentQuestion === questions.length - 2) {
+                setConvertButton("Submit");
+            }
             if (currentQuestion === questions.length - 1) {
-                setShowResults(true);
+                setShowAlertModal(true);   
             }
             else {
                 setCurrentQuestion(currentQuestion + 1);
             }
         }
     }
+
+    const closeAlert = () => setShowAlertModal(false)
 
     return (
         <>
@@ -262,7 +279,7 @@ export const First = () => {
                             <div className="rectangle1-2" />
                             <div className="group1">
                                 <div className="overlap-group1">
-                                    
+
                                     <svg className="img1" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C10 28.5 28.5 20 28.5 0C44.2401 0 57 12.7599 57 28.5Z" fill="#FEB005" />
                                     </svg>
@@ -275,13 +292,13 @@ export const First = () => {
                             <div className="text-wrapper1-2">{score}</div>
                             <div className="text-wrapper1-3">Question {currentQuestion + 1}/{questions.length}</div>
                             <div className="quiz-score flex">
-                                <span idName="correct-score"></span>/<span idName="total-question"></span>
+                                <span idname="correct-score"></span>/<span idname="total-question"></span>
                             </div>
                             <p className="how-many-students-in1">
                                 {questions[currentQuestion].text}
                             </p>
                             <div className="text-wrapper1-4">{wrongans}</div>
-                            
+
                             <ul className="quiz-options">
                                 {questions[currentQuestion].options.map((option) => {
                                     return (
@@ -296,12 +313,13 @@ export const First = () => {
                             </ul>
                             <div className="btnBox">
                                 <button className="btn" onClick={Previous}>Previous</button>
-                                <button type="button" className="btnP" onClick={Next}>Next</button>
+                                <button type="button" className="btnP" onClick={Next}>{convertButton}</button>
 
                             </div>
                         </div>
 
                     </div>
+                    {showAlertModal && <AlertModal Alert = {Alert} closeAlert={closeAlert}/>}
                 </div>
 
             }

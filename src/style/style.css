@@ -513,6 +513,8 @@ li {
   height: 20px;
 }
 
+
+
 @media screen and (min-width:600px) {
 
   .quiz-app-UI-design .div1 {
@@ -855,8 +857,8 @@ li {
   .quiz-app-UI-design .btnBox {
     align-items: center;
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    margin-left: 535px;
-  }
+}
 
 }

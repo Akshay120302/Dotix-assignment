@@ -26,7 +26,7 @@ export const Third = ({ restartGame, score, questions, wrongans }) => {
             <div className="completion3">
               <div className="ellipse3-8" />
               <div className="overlap-group3">
-                <div className="text-wrapper3-4">{((score + wrongans) / questions.length) * 100}%</div>
+                <div className="text-wrapper3-4">{(((score + wrongans) / questions.length) * 100).toFixed(2)}%</div>
                 <div className="text-wrapper3-5">Completion</div>
               </div>
             </div>
