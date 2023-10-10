@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import "../style/style2.css";
+import { useAuth0 } from "@auth0/auth0-react";
 import profile from "../images/Fifth/profile.jpeg";
 import profile2 from "../images/Fifth/profile2.jpeg";
 import profile3 from "../images/Fifth/profile3.jpeg";
@@ -10,6 +11,7 @@ import rectangle2 from "../images/Fifth/Rectangle2.png";
 import rectangle3 from "../images/Fifth/Rectangle3.png";
 
 export const Second = () => {
+    const {isAuthenticated, user } = useAuth0();
     return (
         <div className="quiz-app-UI-design">
             <div className="overlap-wrapper2">
@@ -19,8 +21,13 @@ export const Second = () => {
                     <div className="div2" />
                     <div className="ellipse2-2" />
                     <div className="ellipse2-3" />
-                    <div className="ellipse2-4" />
-                    <img className="img2" alt="Ellipse" src={profile} />
+                    <div className="ellipse2-4">
+                    {isAuthenticated ? (
+                    <img className="img2" alt="Ellipse" src={user.picture} />) :
+                    (
+                        <i className="fa-solid fa-user"></i>
+                        )}
+                    </div>
                     <img className="rectangle2-2" alt="Rectangle" src={rectangle1} />
                     <img className="rectangle2-3" alt="Rectangle" src={rectangle2}/>
                     <img className="rectangle2-4" alt="Rectangle" src={rectangle3} />

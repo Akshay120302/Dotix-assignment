@@ -79,12 +79,15 @@
   .quiz-app-UI-design .ellipse2-4 {
     background-color: #ffffffcc;
     border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 44px;
     left: 319px;
     position: absolute;
     top: 63px;
     width: 44px;
-  }
+}
   
   .quiz-app-UI-design .img2 {
     height: 38px;
@@ -187,17 +190,17 @@
   }
   
   .quiz-app-UI-design .text-wrapper2-5 {
-    color: #ffffff;
-    font-family: "Poppins-Regular", Helvetica;
+    color: #fff;
+    font-family: Poppins-Regular,Helvetica;
     font-size: 20px;
     font-weight: 400;
-    left: 155px;
+    left: 187px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
     text-align: center;
     top: 108px;
-  }
+}
   
   .quiz-app-UI-design .text-wrapper2-6 {
     color: #ffffff;
@@ -243,7 +246,7 @@
     font-family: "Poppins-Regular", Helvetica;
     font-size: 20px;
     font-weight: 400;
-    left: 232px;
+    left: 296px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
@@ -565,6 +568,7 @@
     top: 66px;
     width: 32px;
   }
+
   
 
   @media screen and (min-width:600px) {
