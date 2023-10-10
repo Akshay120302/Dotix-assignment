@@ -1,6 +1,7 @@
 import React , {useState} from "react";
 import { Link} from 'react-router-dom';
 import MyLoginModal from './MyLoginModal';
+import Menu from "./Menu";
 import "../style/style5.css";
 import 'font-awesome/css/font-awesome.min.css';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -10,6 +11,13 @@ function Fifth(){
     const [showLoginModal, setShowLoginModal] = useState(false);
 
     const closeLoginModal = () => setShowLoginModal(false);
+    
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const closeMenu = () => setShowMenu(false);
+
+    
 
     const { isAuthenticated, user } = useAuth0();
 
@@ -65,7 +73,8 @@ function Fifth(){
                         </div>
                     </div>
                     <div className="frame5-4">
-                        <i className="fa-solid fa-bars" idname="frame5-5" style={{color: '#ffffff'}}></i>
+                        <i className="fa-solid fa-bars" idname="frame5-5" style={{color: '#ffffff'}} onClick={() => setShowMenu(true)}></i>
+                        {showMenu && <Menu closeMenu={closeMenu} />}
 
                         {isAuthenticated ? (
 

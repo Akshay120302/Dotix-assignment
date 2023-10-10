@@ -189,10 +189,12 @@
   font-family: "Poppins-SemiBold", Helvetica;
   font-size: 18px;
   font-weight: 600;
+  left: 98px;
   letter-spacing: 0;
   line-height: normal;
-  position: relative;
+  position: unset;
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -203,7 +205,7 @@
   background-color: #ffffffcc;
   border-radius: 22px;
   height: 44px;
-  position: relative;
+  position: unset;
   width: 44px;
 }
 
@@ -542,7 +544,8 @@
     text-align: center;
     width: -moz-fit-content;
     width: fit-content;
-  }
+    margin-left: -140px;
+}
 
   .quiz-app-UI-design .ellipse-wrapper5 {
     display: flex;
