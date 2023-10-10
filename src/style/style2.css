@@ -640,13 +640,11 @@
     }
 
     .quiz-app-UI-design .img2 {
-        height: 38px;
-        left: 1403px;
-        position: absolute;
-        top: 66px;
-        width: 38px;
-        border-radius: 33px;
-    }
+      border-radius: 33px;
+      height: 38px;
+      position: absolute;
+      width: 38px;
+  }
 
     .quiz-app-UI-design .rectangle2-2 {
         height: 211px;
