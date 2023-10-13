@@ -1,0 +1,13 @@
+.page{
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+    background-color: blanchedalmond;
+}
+
+.Heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

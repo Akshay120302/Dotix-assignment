@@ -1,4 +1,5 @@
 .quiz-app-UI-design {
+  height: auto;
   margin-top: 5px;
   background-color: #ffffff;
   display: flex;
@@ -9,7 +10,7 @@
 
 .quiz-app-UI-design .div5 {
   background-color: #ffffff;
-  height: 680px;
+  height: auto;
   overflow: hidden;
   position: relative;
   width: 337px;
@@ -364,15 +365,40 @@
   margin-left: 6px;
 }
 
+.quiz-app-UI-design .container5 {
+  width: 98%;
+  height: auto;
+  min-height: 495px;
+  background-color: #ffc102;
+  border-radius: 10px;
+  margin-top: 285px;
+  margin-left: 4px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.items5 {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  background-color: #e6e6e6;
+  flex-grow: 1;
+  flex-basis: auto;
+  margin: 10px;
+  border-radius: 20px;
+}
+
 @media screen and (min-width:600px) {
 
   .quiz-app-UI-design .div5 {
     background-color: #ffffff;
-    height: 680px;
+    height: 100%;
     overflow: hidden;
     position: relative;
     width: 1440px;
-  }
+}
 
   .quiz-app-UI-design .overlap-group5 {
     height: 304px;
@@ -661,6 +687,30 @@
     width: fit-content;
   }
 
+  .quiz-app-UI-design .container5 {
+    width: 98%;
+    height: auto;
+    min-height: 495px;
+    background-color: #ffc102;
+    border-radius: 10px;
+    margin-top: 285px;
+    margin-left: 16px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.items5 {
+  display: flex;
+  width: auto;
+  height: 233px;
+  background-color: #e6e6e6;
+  flex-grow: 1;
+  flex-basis: fit-content;
+  margin: 20px;
+  border-radius: 20px;
+}
 
 
 }
