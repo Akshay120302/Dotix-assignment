@@ -1,12 +1,12 @@
-import React , {useState} from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import review from "../images/Fifth/group-5.png";
 import "../style/style3.css";
 
 export const Third = ({ restartGame, score, questions, wrongans }) => {
 
-  const [showReview , setShowReview] = useState(false);
-  const closeReview = () => setShowReview(false);
+  // const [showReview , setShowReview] = useState(false);
+  // const closeReview = () => setShowReview(false);
 
   return (
     <div className="quiz-app-UI-design3">
@@ -63,7 +63,6 @@ export const Third = ({ restartGame, score, questions, wrongans }) => {
             </svg>
           </Link>
         </div>
-        if(showReview === false){}
         <div className="text-wrapper3-11">Home</div>
         <div className="text-wrapper3-12">Leaderboard</div>
         <div className="overlap3-5">
