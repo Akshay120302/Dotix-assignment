@@ -30,7 +30,7 @@ function Review({ currentQuestion, score, questions, wrongans, closeReview, opti
             </div>
             <br />
             <br />
-            <div className="btnBox">
+            <div className="btnBoxR">
                 <button onClick={closeReview} className='btnR'>Exit</button>
             </div>
 
