@@ -259,7 +259,7 @@ export const First = () => {
 
     return (
         <>
-            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} />
+            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} currentQuestion={currentQuestion}/>
                 :
                 <div className="quiz-app-UI-design">
                     <div className="div1">

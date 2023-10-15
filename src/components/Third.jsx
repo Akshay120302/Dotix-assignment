@@ -1,12 +1,13 @@
-import React from "react";
+import React , {useState} from "react";
 import { Link } from 'react-router-dom';
 import review from "../images/Fifth/group-5.png";
 import "../style/style3.css";
+import Review from "./Review";
 
-export const Third = ({ restartGame, score, questions, wrongans }) => {
+export const Third = ({ restartGame, score, questions, wrongans ,currentQuestion }) => {
 
-  // const [showReview , setShowReview] = useState(false);
-  // const closeReview = () => setShowReview(false);
+  const [showReview , setShowReview] = useState(false);
+  const closeReview = () => setShowReview(false);
 
   return (
     <div className="quiz-app-UI-design3">
@@ -78,7 +79,8 @@ export const Third = ({ restartGame, score, questions, wrongans }) => {
             <div className="text-wrapper3-13">Generate PDF</div>
           </div>
         </div>
-        <div className="text-wrapper3-14">Review Answer</div>
+        <div className="text-wrapper3-14" onClick={()=>{setShowReview(true)}}>Review</div>
+        
         <div className="text-wrapper3-15">Share Score</div>
         <div className="play-again3">
           <div className="img-wrapper3" onClick={() => restartGame()}>
@@ -119,6 +121,7 @@ export const Third = ({ restartGame, score, questions, wrongans }) => {
           </svg>
         </div>
       </div>
+      {showReview && <Review closeReview={closeReview} questions={questions} currentQuestion={currentQuestion} showReview={showReview}/>}
     </div>
   );
 };
