@@ -5,7 +5,7 @@ function Review({ currentQuestion, score, questions, wrongans, closeReview, opti
     return (
         <>
         <div className={`main ${showReview ? 'show' : ''}`}>
-            {console.log("Entered Review page")}
+        <i className="fa-solid fa-xmark" onClick={closeReview}></i>
             <div className="page">
                 <h1 className='Heading'>Review Page</h1>
                 <br />
@@ -28,10 +28,12 @@ function Review({ currentQuestion, score, questions, wrongans, closeReview, opti
                     </div>
                 ))}
             </div>
-
-            </div>
+            <br />
+            <br />
             <div className="btnBox">
-                <button onClick={closeReview} className='btn'>Exit</button>
+                <button onClick={closeReview} className='btnR'>Exit</button>
+            </div>
+
             </div>
 
             </div>

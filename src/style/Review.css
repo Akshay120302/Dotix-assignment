@@ -1,9 +1,15 @@
 .page {
     overflow-y: scroll;
-    height: 624px;
+    height: 573px;
     padding: 20px;
     margin: 20px;
     background-color: blanchedalmond;
+    margin-top: 19px;
+}
+
+.fa-xmark {
+    margin-left: -213px;
+    margin-top: 35px;
 }
 
 .btnBox {
@@ -12,8 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    margin-top: -32px;
+    background-color: #ffebcd;
+    margin-top: -37px;
 }
 
 .main {
@@ -28,7 +34,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.btn {
+.btnR {
     background-color: #ffad00;
     width: 82px;
     height: 29px;
@@ -36,7 +42,9 @@
     border-color: #ffad00d1;
 }
 
-.Heading{
+.Heading {
+    font-family: 'Font Awesome 6 Free';
+    font-size: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
