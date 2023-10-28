@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import jsPDF from 'jspdf';
 import Third from "./Third";
 import AlertModal from "./AlertModal";
 import { Link } from 'react-router-dom';
@@ -16,6 +17,13 @@ export const First = () => {
     const [answeredQues, setAnsweredQues] = useState(0);
     const [convertButton, setConvertButton] = useState("Next");
     const [showAlertModal, setShowAlertModal] = useState(false);
+
+
+    // const handleOptionSelect = (questionIndex, optionIndex) => {
+    //     const newAnswers = [...answers];
+    //     newAnswers[questionIndex] = optionIndex;
+    //     setAnswers(newAnswers);
+    // };
 
 
     const Alert = () => setShowResults(true);
@@ -196,6 +204,8 @@ export const First = () => {
     ];
 
 
+    const [userResponses, setUserResponses] = useState(Array(questions.length).fill(null));
+
     const optionClicked = (isCorrect) => {
         console.log("Entered function");
         // Increment the score
@@ -207,15 +217,15 @@ export const First = () => {
             if (!isCorrect) {
                 setWrongAns(wrongans + 1);
             }
-            if(currentQuestion === questions.length - 2){
+            if (currentQuestion === questions.length - 2) {
                 setConvertButton("Submit");
             }
-            if(currentQuestion === questions.length - 1){
-                setShowAlertModal(true);  
+            if (currentQuestion === questions.length - 1) {
+                setShowAlertModal(true);
             }
             if (currentQuestion + 1 < questions.length) {
                 setCurrentQuestion(currentQuestion + 1);
-            } 
+            }
             else {
                 setShowResults(true);
             }
@@ -223,6 +233,64 @@ export const First = () => {
 
         setCurrentQuestion(currentQuestion + 1);
 
+    };
+
+    const generatePDF = () => {
+        const doc = new jsPDF({
+            orientation: 'p',
+            unit: 'mm',
+            format: 'a4', // You can adjust the format as needed
+        });
+
+        // Set custom margins (left, top, right, bottom)
+        const contentWidth = 190; // Adjust the content width as needed
+        const pageHeight = doc.internal.pageSize.height;
+        let yPosition = 20; // Start below the top margin
+
+        questions.forEach((question, index) => {
+            const userResponse = userResponses[index];
+
+            // Add the question
+            const questionText = `${index + 1}. ${question.text}`;
+            const textLines = doc.splitTextToSize(questionText, contentWidth);
+            doc.text(textLines, 15, yPosition);
+
+            // Calculate the height of the wrapped text
+            const textHeight = (textLines.length * 10) || 10;
+
+            // Loop through the options of the question
+            question.options.forEach((option, optionIndex) => {
+                const isCorrect = option.isCorrect;
+                const isSelected = userResponse === optionIndex;
+
+                // Determine the color for the option
+                let optionColor = 'black';
+                if (isSelected) {
+                    optionColor = isCorrect ? 'green' : 'red';
+                }
+
+                // Add the option with the appropriate color
+                const optionText = `${option.text} ${isCorrect ? '(Correct)' : ''}`;
+                const optionLines = doc.splitTextToSize(optionText, contentWidth - 20); // Adjust content width
+                doc.setTextColor(optionColor);
+                doc.text(optionLines, 35, yPosition + textHeight + 5);
+                yPosition += optionLines.length * 10;
+            });
+
+            // Calculate the total height for this question
+            const totalHeight = textHeight + (question.options.length * 10) + 15;
+
+            // Check if there's enough space for the next question
+            if (yPosition + totalHeight + 18 >= pageHeight) {
+                doc.addPage(); // Add a new page if there's not enough space
+                yPosition = 20; // Reset the yPosition
+            } else {
+                yPosition += totalHeight - 27; // Adjust the spacing between questions
+            }
+        });
+
+        // Save the PDF
+        doc.save('quiz_results.pdf');
     };
 
     /* Resets the game back to default */
@@ -234,6 +302,7 @@ export const First = () => {
         setShowResults(false);
         setConvertButton("Next");
         setShowAlertModal(false);
+        setUserResponses(Array(questions.length).fill(null))
     };
 
     const Previous = () => {
@@ -247,7 +316,7 @@ export const First = () => {
                 setConvertButton("Submit");
             }
             if (currentQuestion === questions.length - 1) {
-                setShowAlertModal(true);   
+                setShowAlertModal(true);
             }
             else {
                 setCurrentQuestion(currentQuestion + 1);
@@ -259,7 +328,7 @@ export const First = () => {
 
     return (
         <>
-            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} currentQuestion={currentQuestion}/>
+            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} currentQuestion={currentQuestion} generatePDF={generatePDF} />
                 :
                 <div className="quiz-app-UI-design">
                     <div className="div1">
@@ -301,11 +370,21 @@ export const First = () => {
                             <div className="text-wrapper1-4">{wrongans}</div>
 
                             <ul className="quiz-options">
-                                {questions[currentQuestion].options.map((option) => {
+                                {questions[currentQuestion].options.map((option, optionIndex) => {
                                     return (
                                         <li
                                             key={option.id}
-                                            onClick={() => optionClicked(option.isCorrect)}
+                                            onClick={() => {
+                                                const newResponses = [...userResponses];
+                                                newResponses[currentQuestion] = option.id;
+
+                                                setUserResponses(newResponses);
+                                                optionClicked(option.isCorrect);
+                                            }}
+                                            style={{
+                                                color: 'black',
+                                                cursor: 'pointer',
+                                            }}
                                         >
                                             {option.text}
                                         </li>
@@ -320,7 +399,7 @@ export const First = () => {
                         </div>
 
                     </div>
-                    {showAlertModal && <AlertModal Alert = {Alert} closeAlert={closeAlert}/>}
+                    {showAlertModal && <AlertModal Alert={Alert} closeAlert={closeAlert} />}
                 </div>
 
             }

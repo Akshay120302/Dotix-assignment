@@ -78,4 +78,9 @@
         margin: 20px;
         background-color: blanchedalmond;
     }
+
+    .main .fa-xmark {
+        margin-left: -340px;
+        margin-top: 40px;
+    }
 }

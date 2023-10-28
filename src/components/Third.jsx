@@ -4,10 +4,12 @@ import review from "../images/Fifth/group-5.png";
 import "../style/style3.css";
 import Review from "./Review";
 
-export const Third = ({ restartGame, score, questions, wrongans ,currentQuestion }) => {
+export const Third = ({ restartGame, score, questions, wrongans ,currentQuestion, generatePDF,setUserResponces}) => {
 
   const [showReview , setShowReview] = useState(false);
   const closeReview = () => setShowReview(false);
+
+  
 
   return (
     <div className="quiz-app-UI-design3">
@@ -68,7 +70,7 @@ export const Third = ({ restartGame, score, questions, wrongans ,currentQuestion
         <div className="text-wrapper3-12">Leaderboard</div>
         <div className="overlap3-5">
           <div className="text3">{""}</div>
-          <div className="generate-PDF3">
+          <div className="generate-PDF3" onClick={generatePDF}>
             <div className="vector-wrapper3">
               {/* <img className="vector3" alt="Vector" src="../images/Third/image.svg" /> */}
               <svg className="vector3-4" width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
