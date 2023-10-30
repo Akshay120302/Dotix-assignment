@@ -17,7 +17,7 @@ export const First = () => {
     const [answeredQues, setAnsweredQues] = useState(0);
     const [convertButton, setConvertButton] = useState("Next");
     const [showAlertModal, setShowAlertModal] = useState(false);
-
+    const [pdfUrl, setPdfUrl] = useState('');
 
     // const handleOptionSelect = (questionIndex, optionIndex) => {
     //     const newAnswers = [...answers];
@@ -287,11 +287,109 @@ export const First = () => {
             } else {
                 yPosition += totalHeight - 27; // Adjust the spacing between questions
             }
+
+            const pdfBlob = doc.output('blob'); // Get PDF as a Blob
+
+            // Create a URL for the Blob
+            const pdfObjectURL = URL.createObjectURL(pdfBlob);
+
+            // Set the URL in state
+            setPdfUrl(pdfObjectURL);
         });
 
         // Save the PDF
         doc.save('quiz_results.pdf');
     };
+
+      const sharePDF = () => {
+    const doc = new jsPDF({
+      orientation: 'p',
+      unit: 'mm',
+      format: 'a4', // You can adjust the format as needed
+    });
+
+    // Set custom margins (left, top, right, bottom)
+    const contentWidth = 190; // Adjust the content width as needed
+    const pageHeight = doc.internal.pageSize.height;
+    let yPosition = 20; // Start below the top margin
+
+    questions.forEach((question, index) => {
+      const userResponse = userResponses[index];
+
+      // Add the question
+      const questionText = `${index + 1}. ${question.text}`;
+      const textLines = doc.splitTextToSize(questionText, contentWidth);
+      doc.text(textLines, 15, yPosition);
+
+      // Calculate the height of the wrapped text
+      const textHeight = (textLines.length * 10) || 10;
+
+      // Loop through the options of the question
+      question.options.forEach((option, optionIndex) => {
+        const isCorrect = option.isCorrect;
+        const isSelected = userResponse === optionIndex;
+
+        // Determine the color for the option
+        let optionColor = 'black';
+        if (isSelected) {
+          optionColor = isCorrect ? 'green' : 'red';
+        }
+
+        // Add the option with the appropriate color
+        const optionText = `${option.text} ${isCorrect ? '(Correct)' : ''}`;
+        const optionLines = doc.splitTextToSize(optionText, contentWidth - 20); // Adjust content width
+        doc.setTextColor(optionColor);
+        doc.text(optionLines, 35, yPosition + textHeight + 5);
+        yPosition += optionLines.length * 10;
+      });
+
+      // Calculate the total height for this question
+      const totalHeight = textHeight + (question.options.length * 10) + 15;
+
+      // Check if there's enough space for the next question
+      if (yPosition + totalHeight + 18 >= pageHeight) {
+        doc.addPage(); // Add a new page if there's not enough space
+        yPosition = 20; // Reset the yPosition
+      } else {
+        yPosition += totalHeight - 27; // Adjust the spacing between questions
+      }
+    });
+
+    // Save the PDF
+    doc.save('quiz_results.pdf');
+
+    // Create a Blob for the PDF
+    const pdfBlob = doc.output('blob');
+
+    // Create a URL for the Blob
+    const pdfObjectURL = URL.createObjectURL(pdfBlob);
+
+    // Set the URL in state
+    setPdfUrl(pdfObjectURL);
+
+    if (pdfUrl) {
+      // You can use the Web Share API if supported by the browser
+      if (navigator.share) {
+        navigator
+          .share({
+            title: 'Quiz Results',
+            text: 'Check out my quiz results!',
+            url: pdfUrl,
+          })
+          .then(() => {
+            console.log('Successfully shared');
+          })
+          .catch((error) => {
+            console.error('Error sharing:', error);
+          });
+      } else {
+        // Fallback for browsers that don't support the Web Share API
+        window.open(pdfUrl, '_blank');
+      }
+    } else {
+      console.error('PDF not generated.');
+    }
+  };
 
     /* Resets the game back to default */
     const restartGame = () => {
@@ -328,7 +426,7 @@ export const First = () => {
 
     return (
         <>
-            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} currentQuestion={currentQuestion} generatePDF={generatePDF} />
+            {showFinalResults ? <Third questions={questions} restartGame={restartGame} score={score} wrongans={wrongans} currentQuestion={currentQuestion} generatePDF={generatePDF} sharePDF={sharePDF}/>
                 :
                 <div className="quiz-app-UI-design">
                     <div className="div1">

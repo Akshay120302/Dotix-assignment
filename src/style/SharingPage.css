@@ -1,6 +1,6 @@
 
 
-.modal-wrapper2{
+.modal-wrapper3{
     position: fixed;
     left: 0px;
     right: 0px;
@@ -9,7 +9,7 @@
     background-color: rgba(121, 118, 125, 0.7);
 }
 
-.modal-container2 {
+.modal-container3 {
     overflow-y: auto;
     margin-top: 6px;
     position: fixed;
@@ -43,7 +43,7 @@
     margin-top: 40px;
 }
 
-.fir {
+.modal-container3 .fir {
     background-color: #ffc102d9;
     text-align: center;
     width: 275px;
@@ -60,36 +60,38 @@
 
 @media screen and (max-width:600px){
     
-    .modal-container2 {
-        overflow-y: auto;
-        margin-top: 93px;
+    .modal-container3 {
+        margin-top: 489px;
         position: fixed;
         top: 50%;
-        left: 33%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        width: 216px;
-        min-height: 886px;
+        width: 338px;
         padding: 10px;
-        background-color: rgb(255, 255, 255);
+        background-color: #eee;
     }
 
-    .fir {
-        background-color: #ffc102db;
+    .modal-container3 .fir {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #eee;
         text-align: center;
-        width: 207px;
-        height: 50px;
-        border-radius: 45px;
+        width: 325px;
+        height: 93px;
+        border-radius: 18px;
     }
 
     .menu {
         margin: 4px;
-        width: 206px;
-        height: 626px;
-        background-color: #ffffff;
+        width: 326px;
+        height: 216px;
+        background-color: #eee;
     }
 
-    .fa-xmark {
-        margin-left: 210px;
-        margin-top: 32px;
+    .modal-container3 .fa-xmark {
+        margin-left: 321px;
+        margin-top: 0px;
     }
 }
