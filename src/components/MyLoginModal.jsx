@@ -66,12 +66,12 @@ const MyLoginModal = ({closeLoginModal}) => {
                         <input type="text" value={password} className='input' onChange={handleChange} name='Password' required />
                         <br />
 
-                        <button className="btnL" onClick={() => loginWithRedirect()}>Sign In</button>
+                        <button className="btnL">Sign In</button>
                         <br />
                         <div className="btn-holder">
                         <span className='centre'>Or</span>
                         <br />
-                        <span className='Login'>Log In</span>
+                        <span className='Login' onClick={() => loginWithRedirect()}>Log In</span>
                         </div>
 
                     </>
