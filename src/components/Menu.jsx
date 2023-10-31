@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
+import { useAuth0 } from "@auth0/auth0-react";
 import "../style/Menu.css";
 
-const Menu = ({ closeMenu }) => {
+const Menu = ({ closeMenu , setShowLoginModal ,showLoginModal }) => {
 
     useEffect(() => {
 
@@ -10,6 +11,8 @@ const Menu = ({ closeMenu }) => {
 
         return () => { document.body.style.overflowY = "scroll"; }
     }, [])
+
+    const { isAuthenticated, user } = useAuth0();
 
     return (
         <>
@@ -20,32 +23,42 @@ const Menu = ({ closeMenu }) => {
 
 
                     <div className="menu">
-                        <div className="fir">This</div>
                         <br />
-                        <div className="fir">is</div>
-                        <br />
-                        <div className="fir">for</div>
-                        <br />
-                        <div className="fir">placing</div>
-                        <br />
-                        <div className="fir">additional</div>
-                        <br />
-                        <div className="fir">options</div>
-                        <br />
-                        <div className="fir">to</div>
-                        <br />
-                        <div className="fir">find</div>
-                        <br />
-                        <div className="fir">more about</div>
+                        <div className="fir">
+                            {isAuthenticated ? (
+
+                                <div className="UserName">{user.name}</div>) :
+                                (
+                                    <div className="UserName">User Login</div>
+                                )}
+                            <div className="ProfileImg">
+                                {isAuthenticated ? (
+                                    <img className="ProfileImg" alt='ProfileImg' src={user.picture} />) :
+                                    (
+                                        <i className="fa-solid fa-user"></i>
+                                    )}
+                                    </div>
+                            </div>
+
+                            <div className="fir">is</div>
+
+                            <div className="fir">for</div>
+
+                            <div className="fir">placing</div>
+
+                            <div className="fir">additional</div>
+
+                            <div className="fir">options</div>
+
+                        </div>
                     </div>
+
+
                 </div>
 
-
-            </div>
-
-        </>
-    );
+            </>
+            );
 };
 
 
-export default Menu;
+            export default Menu;

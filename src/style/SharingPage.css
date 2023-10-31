@@ -11,13 +11,13 @@
 
 .modal-container3 {
     overflow-y: auto;
-    margin-top: 6px;
+    margin-top: 0px;
     position: fixed;
     top: 50%;
-    left: 10%;
+    left: 50%;
     transform: translate(-50%,-50%);
-    width: 288px;
-    min-height: 810px;
+    width: 283px;
+    min-height: 243px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
 }
@@ -51,10 +51,10 @@
 }
 
 
-.menu{
+.modal-container3 .menu {
     margin: 4px;
-    width: 232px;
-    height: 500px;
+    width: 276px;
+    height: 204px;
 }
 
 
@@ -83,7 +83,7 @@
         border-radius: 18px;
     }
 
-    .menu {
+    .modal-container3 .menu {
         margin: 4px;
         width: 326px;
         height: 216px;

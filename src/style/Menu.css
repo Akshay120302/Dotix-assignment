@@ -44,17 +44,38 @@
 }
 
 .fir {
-    background-color: #ffc102d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc10224;
     text-align: center;
-    width: 275px;
-    height: 56px;
+    width: 295px;
+    height: 117px;
+}
+
+.UserName {
+    width: 60%;
+    min-height: 20px;
+}
+
+.ProfileImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
 }
 
 
-.menu{
-    margin: 4px;
-    width: 232px;
-    height: 500px;
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2px;
+    height: 713px;
 }
 
 
