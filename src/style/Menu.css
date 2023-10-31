@@ -1,6 +1,4 @@
-
-
-.modal-wrapper2{
+.modal-wrapper2 {
     position: fixed;
     left: 0px;
     right: 0px;
@@ -15,45 +13,51 @@
     position: fixed;
     top: 50%;
     left: 10%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 288px;
     min-height: 810px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
 }
 
-.ul{
-    
+.ul {
+
     width: 250px;
     height: 700px;
 
 }
 
-.li{
+.li {
     width: 120px;
     height: 22px;
 }
 
-.fa-bars{
+.fa-bars {
     margin-left: 26px;
 }
 
 .fa-xmark {
     margin-left: 280px;
-    margin-top: 40px;
+    margin-top: 8px;
+    margin-bottom: 20px;
 }
 
 .fir {
+    font-weight: 500;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffc10224;
+    background-color: #ffc102;
     text-align: center;
     width: 295px;
     height: 117px;
 }
 
 .UserName {
+    font-family: 'FontAwesome';
+    font-weight: 500;
+    font-size: x-large;
     width: 60%;
     min-height: 20px;
 }
@@ -63,9 +67,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 24px;
-    width: 30px;
-    height: 30px;
-    margin-left: 25px;
+    width: 50px;
+    height: 50px;
+    margin-left: -45px;
 }
 
 
@@ -79,15 +83,15 @@
 }
 
 
-@media screen and (max-width:600px){
-    
+@media screen and (max-width:600px) {
+
     .modal-container2 {
         overflow-y: auto;
         margin-top: 93px;
         position: fixed;
         top: 50%;
         left: 33%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 216px;
         min-height: 886px;
         padding: 10px;
@@ -95,22 +99,26 @@
     }
 
     .fir {
-        background-color: #ffc102db;
+        font-weight: 500;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffc102;
         text-align: center;
-        width: 207px;
-        height: 50px;
-        border-radius: 45px;
+        width: 295px;
+        height: 117px;
     }
 
     .menu {
-        margin: 4px;
-        width: 206px;
+        overflow-y: scroll;
+        width: 100%;
         height: 626px;
         background-color: #ffffff;
     }
 
     .fa-xmark {
         margin-left: 210px;
-        margin-top: 32px;
+        margin-top: 50px;
     }
 }
