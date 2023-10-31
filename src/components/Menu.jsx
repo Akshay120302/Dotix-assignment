@@ -16,7 +16,7 @@ const Menu = ({ closeMenu, setShowLoginModal, showLoginModal }) => {
 
     return (
         <>
-            <div className="modal-wrapper2">
+            <div className="modal-wrapper2" onClick={closeMenu}>
                 <div className="modal-container2">
 
                     <i class="fa-solid fa-xmark" onClick={closeMenu}></i>
