@@ -340,16 +340,15 @@
   width: 242px;
 }
 
-.quiz-app-UI-design .btn {
-  margin: 20px;
-  width: 150px;
-  height: 40px;
-  border-radius: 10px;
-  color: #000000;
-  margin-left: 46px;
+.quiz-app-UI-design .btn, .quiz-app-UI-design .btnP {
   background-color: #ffc102;
+  border-radius: 10px;
+  color: #000;
   font-size: 16px;
   font-weight: 600;
+  height: 40px;
+  width: 150px;
+  margin-left: 23px;
 }
 
 .quiz-app-UI-design .btnP {

@@ -66,7 +66,7 @@ const MyLoginModal = ({closeLoginModal}) => {
                         <input type="text" value={password} className='input' onChange={handleChange} name='Password' required />
                         <br />
 
-                        <button className="btnL">Sign In</button>
+                        <button className="btnL">Sign Up</button>
                         <br />
                         <div className="btn-holder">
                         <span className='centre'>Or</span>

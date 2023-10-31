@@ -131,6 +131,17 @@ input {
     height: auto;
 }
 
+.btn {
+    background-color: #ffc102;
+    border-radius: 10px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    width: 150px;
+    margin-left: 23px;
+}
+
 @media screen and (max-width:600px) {
 
     .modal-container {
@@ -188,7 +199,7 @@ input {
     }
 
     .profile {
-        background-color: #faebd7;
+        background-color: #ffffff;
         height: 100px;
         margin-left: 10px;
         width: 400px;
