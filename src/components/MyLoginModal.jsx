@@ -14,7 +14,7 @@ const MyLoginModal = ({closeLoginModal}) => {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleChange = (e) => {
+    const HandleChange = (e) => {
         const { name, value } = e.target
 
         if (name === "loginName") {
@@ -60,10 +60,10 @@ const MyLoginModal = ({closeLoginModal}) => {
 
                         <span>Login Name :</span>
                         <input type="text" className="input" value={loginName}
-                            onChange={handleChange} name='loginName' required />
+                            onChange={HandleChange} name='loginName' required />
                         <br />
                         <span>Password : </span>
-                        <input type="text" value={password} className='input' onChange={handleChange} name='Password' required />
+                        <input type="text" value={password} className='input' onChange={HandleChange} name='Password' required />
                         <br />
 
                         <button className="btnL">Sign Up</button>

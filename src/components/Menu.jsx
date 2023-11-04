@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from 'react-router-dom';
 import "../style/Menu.css";
 
-const Menu = ({ closeMenu, setShowLoginModal, showLoginModal }) => {
+const Menu = ({ closeMenu}) => {
 
     useEffect(() => {
 
@@ -16,7 +17,7 @@ const Menu = ({ closeMenu, setShowLoginModal, showLoginModal }) => {
 
     return (
         <>
-            <div className="modal-wrapper2" onClick={closeMenu}>
+          <div className="modal-wrapper2">
                 <div className="modal-container2">
 
                     <i class="fa-solid fa-xmark" onClick={closeMenu}></i>
@@ -42,13 +43,16 @@ const Menu = ({ closeMenu, setShowLoginModal, showLoginModal }) => {
 
                         <div className="fir">History</div>
 
-                        <div className="fir">Create Quiz</div>
-
-                        <div className="fir">placing</div>
+                        <Link to = "/CreateQuiz">
+                        <div className="fir" >Create Quiz</div>
+                        </Link>
 
                         <div className="fir">Contact</div>
 
                         <div className="fir">About OneMNC</div>
+
+                        <div className="fir">Settings</div>
+
 
                     </div>
                 </div>
